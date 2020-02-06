@@ -5,6 +5,8 @@ buildscript {
 
     ext.timberVersion = '4.7.1'
 
+    ext.gson = '2.8.5'
+
     //test lib version
     ext.junitVersion = '4.12'
     ext.testRunner = '1.2.0'
