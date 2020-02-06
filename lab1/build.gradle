@@ -5,6 +5,14 @@ buildscript {
 
     ext.timberVersion = '4.7.1'
 
+    //test lib version
+    ext.junitVersion = '4.12'
+    ext.testRunner = '1.2.0'
+    ext.espresso = '3.2.0'
+    ext.mockitoVersion = '2.27.0'
+    ext.mockitoAndroidVersion = '2.24.5'
+    ext.mockitoKotlinVersion = '2.2.0'
+
     repositories {
         google()
         jcenter()
