@@ -1,3 +1,14 @@
 <resources>
-    <string name="app_name">Lab1</string>
+    <string name="app_name">Lab2</string>
+    <string name="hintFirstEdit">Введите первое число</string>
+    <string name="hintSecondEdit">Введите второе число</string>
+    <string name="plus">+</string>
+    <string name="minus">-</string>
+    <string name="divide">/</string>
+    <string name="multiply">*</string>
+    <string name="resultHint">Результат:</string>
+    <string name="noResultsYet">Вы еще ничего не считали!</string>
+    <string name="notEnteredFirstNumber">Вы не указали первое число!</string>
+    <string name="notEnteredSecondNumber">Вы не указали второе число!</string>
+    <string name="secondNumberIsZero">Для деления второе число не должно быть нулем!</string>
 </resources>
