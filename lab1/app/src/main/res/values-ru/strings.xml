@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Задача 3</string>
+    <string name="makePhoto">Сделать фото</string>
+    <string name="youDidNotWriteName">Вы не ввели имя!</string>
+    <string name="writeYourName">Введите имя</string>
+</resources>

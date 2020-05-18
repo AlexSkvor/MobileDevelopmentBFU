@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="textBig">16sp</dimen>
+    <dimen name="textSuperBig">28sp</dimen>
+
+</resources>

@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">Lab1</string>
+    <string name="app_name">Task 3</string>
+    <string name="makePhoto">Make photo</string>
+    <string name="youDidNotWriteName">You did not write your name yet!</string>
+    <string name="writeYourName">Write your name</string>
+    <string name="stub" translatable="false">TODO</string>
 </resources>
