@@ -5,6 +5,7 @@ import android.os.Build
 import android.os.Bundle
 import android.util.Log
 import androidx.core.app.ActivityCompat
+import timber.log.Timber
 
 class MainActivity : LoggingLifecycleActivity() {
 
@@ -22,20 +23,20 @@ class MainActivity : LoggingLifecycleActivity() {
     override fun onStart() {
         super.onStart()
         val info = packageManager.getPackageInfo(this.packageName, PackageManager.GET_PERMISSIONS)
-        Log.d(TAG, "SDK " + Build.VERSION.SDK_INT + " App Permissions:")
+        Timber.d("SDK ${Build.VERSION.SDK_INT}  App Permissions:")
         info.requestedPermissions?.forEach {
             if (checkPermission(it, android.os.Process.myPid(), android.os.Process.myUid()) == PackageManager.PERMISSION_GRANTED) {
-                Log.d(TAG,"$it PERMISSION_GRANTED")
+                Timber.d("$it PERMISSION_GRANTED")
             } else {
-                Log.d(TAG,"$it PERMISSION_DENIED")
+                Timber.d("$it PERMISSION_DENIED")
                 listOfNonGrantedPermissions.add(it)
             }
         }
         makeRequestForNotGrantedPermissions()
     }
 
-    private fun makeRequestForNotGrantedPermissions(){
-        if (listOfNonGrantedPermissions.isNotEmpty()){
+    private fun makeRequestForNotGrantedPermissions() {
+        if (listOfNonGrantedPermissions.isNotEmpty()) {
             val nextPermission = arrayOf(listOfNonGrantedPermissions.first())
             listOfNonGrantedPermissions.removeAt(0)
             ActivityCompat.requestPermissions(
@@ -54,9 +55,9 @@ class MainActivity : LoggingLifecycleActivity() {
         when (requestCode) {
             MY_PERMISSIONS_REQUEST_CODE -> {
                 if (grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                    Log.d(TAG,"Granted")
+                    Timber.d("Granted")
                 } else {
-                    Log.d(TAG,"NOT Granted")
+                    Timber.d("NOT Granted")
                 }
                 return makeRequestForNotGrantedPermissions()
             }
